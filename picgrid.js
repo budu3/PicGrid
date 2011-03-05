@@ -20,61 +20,51 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-
-
 */
 
 (function( $ ){
 
-			$.fn.picGrid = function( options ) {
+      $.fn.picGrid = function( options ) {
 
-				var images = 	[{'src':'barack.jpg', 'width':'194px', 'height':'259px'},
-    						 	 {'src':'barack.jpg', 'width':'194px', 'height':'259px'},
-    						 	 {'src':'barack.jpg', 'width':'194px', 'height':'259px'},
-    						 	 {'src':'barack.jpg', 'width':'194px', 'height':'259px'}
-    							];
+        var images =  [];
 
-				var settings = {
-          'cols' : '',
-          'rows' : '',
-          'images': '',
-          'labels': [],
+        var settings = {
+          'cols' : '1',
+          'rows' : '1',
+          'images': images,
           'width': 0,
           'height': 0
         };
 
+        var tag = "";
 
-    		var tag = "";
-
-				return this.each(function() {
-					
-					if ( options ) { 
-        				$.extend( settings, options );
-      		}
-      				
-      				var k = 0;
-      				for (i=0; i<settings['rows']; i++){
-      					for (j=0; j<settings['cols']; j++){
-
+        return this.each(function() {
+          
+          if ( options ) { 
+                $.extend( settings, options );
+          }
+              
+              var k = m = 0;
+              for (var i=0; i<settings['rows']; i++){
+                for (var j=0; j<settings['cols']; j++){
                   var w;
                   var h;
-                  (settings['width'] > 0) ? w = settings['images'][k].width ) : w = settings['width'];
-                  (settings['height'] > 0) ? h = settings['images'][k].height ) : h = settings['height'];
+                  (settings['width'] >= 0) ? w = settings['images'][k].width  : w = settings['width'];
+                  (settings['height'] >= 0) ? h = settings['images'][k].height : h = settings['height'];
 
-      						tag+="<span id='picGridImg_"+ k +"'><img src='"+ settings['images'][k].src +"' width='"+ w +"' height='"+ h +"'></span>";
-      						k++;
-      					}
+                  tag+="<span id='picGridImg_"+ k +"'><img src='"+ settings['images'][k].src +"' width='"+ w +"' height='"+ h +"'></span>";
+                  k++;
+                }
                 tag+="<br/>";
                 for (n=0; n<settings['cols']; n++){
-                  (settings['width'] > 0) ? w = settings['images'][k].width ) : w = settings['width'];
-                  //(settings['height'] > 0) ? h = settings['images'][k].height ) : h = settings['height'];
-                  tag+="<span id='picGridLabel' style='display:inline-block; width:"+ w +"'>"+ settings['labels'][n] +"</span>";
+
+                  (settings['width'] >= 0) ? w = settings['images'][i].width  : w = settings['width'];
+                  tag+="<span id='picGridLabel' style='display:inline-block; width:"+ w +"'>"+ settings['images'][m].label +"</span>";
+                  m++;
                 }
-      					tag+="<br/>";
-      				}
-					$(this).append(tag);			
-				});
-			};
-		})( jQuery );
+                tag+="<br/>";
+              }
+          $(this).append(tag);      
+        });
+      };
+    })( jQuery );
