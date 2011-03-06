@@ -28,9 +28,9 @@ Example
 Documentation
 ---------------
 
-.picGrid(settings)
+.picGrid(__settings__)
 
-settings An objcet containing the various variables needed to create your grid
+__settings__ An objcet containing the various variables needed to create your grid
 
 **.cols** the number of columns in your grid
 
@@ -42,17 +42,17 @@ settings An objcet containing the various variables needed to create your grid
 
  **.images** an array containing the attributes of all the images in your grid
 
-  **.src** the url of the image
+  **src** the url of the image
 
-  **.width** the width of the image
+  **width** the width of the image
 
-  **.height** the height of the image
-  
-  **.label** the label of the image
+  **height** the height of the image
+
+  **label** the label of the image
 
 Links
 ------
-Example and Project Homepage: [http://budu3.github.com/PicGrid/]
+Example and Project Homepage: <http://budu3.github.com/PicGrid/>
 
 Author
 -------
