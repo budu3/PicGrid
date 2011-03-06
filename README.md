@@ -33,18 +33,26 @@ Documentation
 settings An objcet containing the various variables needed to create your grid
 
 **.cols** the number of columns in your grid
+
 **.rows** the number of rows in your grid
+
 **.width** the width of all the images in your column. If this is set to 0 then you have to set the width attribute in the images array
+
 **.height** the width of all the images in your column. If this is set to 0 then you have to set the width attribute in the image array
+
  **.images** an array containing the attributes of all the images in your grid
+
   **.src** the url of the image
+
   **.width** the width of the image
+
   **.height** the height of the image
+  
   **.label** the label of the image
 
 Links
 ------
-Example and Project Homepage: (http://budu3.github.com/PicGrid/)
+Example and Project Homepage: [http://budu3.github.com/PicGrid/]
 
 Author
 -------
