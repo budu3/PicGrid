@@ -52,7 +52,7 @@ THE SOFTWARE.
                   (settings['width'] >= 0) ? w = settings['images'][k].width  : w = settings['width'];
                   (settings['height'] >= 0) ? h = settings['images'][k].height : h = settings['height'];
 
-                  tag+="<span id='picGridImg_"+ k +"'><img src='"+ settings['images'][k].src +"' width='"+ w +"' height='"+ h +"'></span>";
+                  tag+="<span id='picGridImg_"+ k +" class='picGridBorder'><img src='"+ settings['images'][k].src +"' width='"+ w +"' height='"+ h +"'></span>";
                   k++;
                 }
                 tag+="<br/>";
