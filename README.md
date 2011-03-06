@@ -13,14 +13,14 @@ Example
                {'src':'203.jpg', 'width':'200px', 'height':'200px', 'label': 'kitten 4'}
                ];
 
-var settings = {
-	'cols' : 2,
-  	'rows' : 2,
-   	'images': images,
-  	'width': 0,
-   	'height': 0
-};
+    var settings = {
+		'cols' : 2,
+  		'rows' : 2,
+   		'images': images,
+  		'width': 0,
+   		'height': 0
+    };
 
-$(document).ready(function(){
-	$("#main").picGrid(settings);
-}
+    $(document).ready(function(){
+		$("#main").picGrid(settings);
+    }
