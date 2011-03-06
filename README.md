@@ -28,9 +28,9 @@ Example
 Documentation
 ---------------
 
-.picGrid(__settings__)
+.picGrid(_settings_)
 
-__settings__ An objcet containing the various variables needed to create your grid
+_settings_ An objcet containing the various variables needed to create your grid
 
 **.cols** the number of columns in your grid
 
@@ -42,13 +42,13 @@ __settings__ An objcet containing the various variables needed to create your gr
 
  **.images** an array containing the attributes of all the images in your grid
 
-  **src** the url of the image
+ > **src** the url of the image
 
-  **width** the width of the image
+  >**width** the width of the image
 
-  **height** the height of the image
+  >**height** the height of the image
 
-  **label** the label of the image
+  >**label** the label of the image
 
 Links
 ------
